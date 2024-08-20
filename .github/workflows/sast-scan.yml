@@ -1,0 +1,13 @@
+name: Sast-Scan
+
+on: 
+  push:
+    tags: 
+     - '*'
+
+jobs:
+  test:
+    - name: Sast-node-test
+      uses: AppThreat/sast-scan-action@master
+      with:
+        type: "nodejs"
